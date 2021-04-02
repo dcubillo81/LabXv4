@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ContactEntity" representedClassName="ContactEntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="toMoney" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MoneyEntity"/>
+    </entity>
+    <entity name="MoneyEntity" representedClassName="MoneyEntity" syncable="YES">
+        <attribute name="ammountdescription" optional="YES" attributeType="String"/>
+        <attribute name="colones" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dolares" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="toContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContactEntity"/>
+    </entity>
+    <elements>
+        <element name="ContactEntity" positionX="-45" positionY="0" width="128" height="73"/>
+        <element name="MoneyEntity" positionX="202.4296875" positionY="56.21484375" width="128" height="103"/>
+    </elements>
+</model>
